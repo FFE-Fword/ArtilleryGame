@@ -6,9 +6,8 @@ class Enemy():
 	    self.armour = 100
 	    self.description = "An enemy of Canada that must not\
 	    be allowed to live."
-	    
-	    
-	
+
+   
 	def is_alive(self):
 	    return self.hp > 0
     
@@ -22,7 +21,7 @@ class Armour(Enemy):
 		some sort of armoured vehicle."
 	
 	def lose_armour(self, damage):
-		self.armour -= damge
+		self.armour -= damage
 		return self.armour
 			
 class AntiAir(Enemy):
