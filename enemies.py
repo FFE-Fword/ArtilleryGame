@@ -47,5 +47,4 @@ class MBT(Armour):
 class Recce(Armour):
     def __init__(self):
         self.armour *= 0.75
-        self.description = "Light and fast, enemy recce vehicle can't take a hit.\
-         But also won't stick around long"
+        self.description = "Light and fast, enemy recce vehicle can't take a\ hit. But also won't stick around long"
