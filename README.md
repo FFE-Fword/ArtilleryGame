@@ -7,5 +7,5 @@ will appear static on the game map (top down view of a "real world life like 1:5
 coordiantes that the player can obatain by hovering their mouse cursor over the enemy, then using that data in an artillery 
 forward observer Fire Mission format to engage with friendly "computer" controlled artillery.
 
-Started making Enemy() in enemy.py
+Started making Enemy() in enemy.py  
 Started making Friendly() in friendlies.py
