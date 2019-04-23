@@ -1,8 +1,6 @@
 
 
-""" Contains all enemy classes. They all have base variables of hp (health),
-    armour and a base description. When enemies take damage, their armour
-    will deplete until 0, then hp will deplete."""
+""" CLASSES DO NOT WORK YET!!!!!Contains all enemy classes. They all have base      variables of hp (health), armour and a base description. When enemies take      damage, their armour will deplete until 0, then hp will deplete."""
 
 
 class Enemy():  # All enemies a derived from this class
