@@ -27,8 +27,8 @@ class Enemy():  # All enemies a derived from this class
         self.base_armour += amt
 
     # Function that checks if the damage taken will reduce self.armour below 0
-    # if it does, set self.armour=0 and take the remainder and sets it to 
-    # self.hp     
+    # if it does, set self.armour=0 and take the remainder and sets it to
+    # self.hp
     def take_damage(self, damage):
         hp_damage = 0
         if (damage - self.base_armour) <= 0:
@@ -36,7 +36,7 @@ class Enemy():  # All enemies a derived from this class
         elif (damage - self.base_armour) > 0:
             hp_damage = damage - self.base_armour
             self.base_hp -= hp_damage
-            self.base_armour = 0     
+            self.base_armour = 0
             if self.base_hp <= 0:
                 self.base_hp = 0
 
