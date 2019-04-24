@@ -22,7 +22,7 @@ def spawn_sec():
                 i_sec.append(en_diss)
         return i_sec
 
-# Use .cout to find occurance in list
+# Use .count to find occurance in list
 
 def is_sec(list):
         return list.count(en_diss) >=10
