@@ -1,6 +1,9 @@
 
 
-""" CLASSES work with basic functionality. Contains all enemy classes. They all have base variables of hp (health), armour and a base description. When enemies take damage, their armour will deplete until 0, then hp will deplete."""
+""" CLASSES work with basic functionality. Contains all enemy classes. They all
+ have base variables of hp (health), armour and a base description. When
+ enemies take damage, their armour will deplete until 0, then hp will
+ deplete."""
 
 
 class Enemy():  # All enemies a derived from this class
@@ -8,7 +11,7 @@ class Enemy():  # All enemies a derived from this class
     base_hp = 100
     base_armour = 100
     description = ("An enemy of Canada that must not be allowed"
-    " to live!!!")
+                   " to live!!!")
 
     def __str__(self):
         return "{}".format(self.description)
@@ -33,11 +36,12 @@ class Enemy():  # All enemies a derived from this class
 # Armour, AntiAir and Dissmounts direct child of Enemy()
 
 class Armour(Enemy):
-       def __init__(self):
-            super().__init__() 
-            self.base_hp *= 1.25
-            self.base_armour *= 1
-            self.description = ("The enemy apears to be hatches down in some" "sort of armoured vehicle")
+    def __init__(self):
+        super().__init__()
+        self.base_hp *= 1.25
+        self.base_armour *= 1
+        self.description = ("The enemy apears to be hatches down in some"
+                            "sort of armoured vehicle")
 
 
 """ TODO: add functions to dissmounts to add more armour if they have some
@@ -52,7 +56,7 @@ class Dissmounts(Enemy):  # No armour unless under cover.
         self.base_hp *= 0.5
         self.base_armour = 0
         self.description = ("Enemy soldiers. Basic grunts. Very vulnerable"
-            " in the open but harder to kill once dug-in.")
+                            " in the open but harder to kill once dug-in.")
 
 
 """ These 3 are direct from Armour(). Armour is being multiplied by a set
@@ -64,7 +68,7 @@ class AntiAir(Armour):
         super().__init__()
         self.base_armour *= 0.5
         self.description = ("It's a enemy air defence vehicle! This should "
-            "be a top priority kill.")
+                            "be a top priority kill.")
 
 
 class MBT(Armour):
@@ -72,7 +76,7 @@ class MBT(Armour):
         super().__init__()
         self.base_armour *= 1.25
         self.description = ("Enemy MBT out of concealment! Prime target for "
-            "the Guns!")
+                            "the Guns!")
 
 
 class Recce(Armour):
@@ -80,7 +84,8 @@ class Recce(Armour):
         super().__init__()
         self.base_armour *= 0.75
         self.description = ("Light and fast, recce vehicles aren't "
-            "made to take a hit.")
+                            "made to take a hit.")
+
 
 tsevtwo = MBT()
 zsu = AntiAir()

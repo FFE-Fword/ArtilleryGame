@@ -78,7 +78,8 @@ class Recce(Armour):
         super().__init__()
         self.base_armour *= 0.75
         self.description = ("Light and fast, recce vehicles aren't "
-            "made to take a hit.")
+                            "made to take a hit.")
+
 
 tsevtwo = MBT()
 zsu = AntiAir()
@@ -86,9 +87,3 @@ print(zsu.base_armour)
 print(tsevtwo.base_armour)
 print(tsevtwo.base_hp)
 print(zsu)
-
-        
-
-  
-        
-  
