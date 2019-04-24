@@ -39,7 +39,7 @@ class Armour(Enemy):
 
 
 """ TODO: add functions to dissmounts to add more armour if they have some
-    sort of cover ie. OHP, Trenches. Possibliy cover can be chosen from a
+    sort of cover ie. OHP, Dug-in. Possibliy cover can be chosen from a
     list of covers"""
 
 
