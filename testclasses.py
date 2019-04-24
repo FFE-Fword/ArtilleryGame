@@ -32,7 +32,8 @@ class Enemy():  # All enemies a derived from this class
             hp_damage = damage - self.base_armour
             self.base_hp -= hp_damage
             self.base_armour = 0     
-            
+            if self.base_hp <= 0:
+                self.base_hp = 0
         
 
 # Armour, AntiAir and Dissmounts direct child of Enemy()
@@ -89,17 +90,19 @@ class Recce(Armour):
 
 tsevtwo = MBT()
 zsu = AntiAir()
+brdm = Recce()
+nazis = Dissmounts()
 
-print(tsevtwo.base_armour)
-print(tsevtwo.base_hp)
-tsevtwo.take_damage(100)
-print(tsevtwo.base_hp)
-print(tsevtwo.base_armour)
-tsevtwo.take_damage(100)
-print(tsevtwo.base_hp)
-print(tsevtwo.base_armour)
+print(nazis.base_armour)
+print(nazis.base_hp)
+nazis.take_damage(100)
+print(nazis.base_hp)
+print(nazis.base_armour)
+nazis.take_damage(100)
+print(nazis.base_hp)
+print(nazis.base_armour)
 
 
 
-print(tsevtwo)
+print(nazis)
 print(zsu)
