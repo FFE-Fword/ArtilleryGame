@@ -26,11 +26,19 @@ class Enemy():  # All enemies a derived from this class
     def add_armour(self, amt):
         self.base_armour += amt
 
-    # Function that detucts taken damage from armour
-
-    def lose_armour(self, damage):
-        self.base_armour -= damage
-        return self.base_armour
+    # Function that checks if the damage taken will reduce self.armour below 0
+    # if it does, set self.armour=0 and take the remainder and sets it to 
+    # self.hp     
+    def take_damage(self, damage):
+        hp_damage = 0
+        if (damage - self.base_armour) <= 0:
+            self.base_armour -= damage
+        elif (damage - self.base_armour) > 0:
+            hp_damage = damage - self.base_armour
+            self.base_hp -= hp_damage
+            self.base_armour = 0     
+            if self.base_hp <= 0:
+                self.base_hp = 0
 
 
 # Armour, AntiAir and Dissmounts direct child of Enemy()
@@ -39,7 +47,6 @@ class Armour(Enemy):
     def __init__(self):
         super().__init__()
         self.base_hp *= 1.25
-        self.base_armour *= 1
         self.description = ("The enemy apears to be hatches down in some"
                             "sort of armoured vehicle")
 
