@@ -6,7 +6,6 @@ zsu = AntiAir()
 brdm = Recce()
 nazis = Dissmounts()
 
-nazi.i
 print(nazis.base_armour)
 print(nazis.base_hp)
 nazis.take_damage(1)
