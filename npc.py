@@ -118,31 +118,40 @@ class Recce(Armour):
 #############################
 #############################
 
+"""Working. Needs works still. All friendly classes below. None of them have base armour since they would not be dug in...and we all know it!!"""
 
 class Friendly(Npc):
     def __init__(self):
-        pass
+        super().__init__()
+        self.base_armour = 0
+        self.description = ("A friendly GBA+ qualified member of the"
+                            " Canadian Armed Forces!")
 
 
-class Armour(Friendly):
+class Heavies(Friendly):
     def __init__(self):
-        pass
+        super().__init__()
+        self.description = ("A hard chargin', gravy chugin', Strat!")
 
 
-class Infantry(Friendly):
+class Grunt(Friendly):
     def __init__(self):
-        pass
+        super().__init__()
+        self.base_hp *= 0.5
+        self.description = ("Your friendly neighbourhood Patricia")
 
 
 class Guns(Friendly):
     def __init__(self):
-        pass
+        super().__init__()
+        self.base_hp *+ 0.2
+        self.description = ("Friendly artillery piece. Manned by the finest "
+                            "gunners in 1RCHA, and therefore the world.")
 
 
-tsevtwo = MBT()
-zsu = AntiAir()
-brdm = Recce()
+
 nazis = Dissmounts()
+comeau = Heavies()
 
 print(nazis.base_armour, nazis.base_hp)
 nazis.has_cover()
@@ -150,4 +159,11 @@ print(nazis.is_alive())
 nazis.take_damage(30)
 print(nazis.base_armour, nazis.base_hp)
 nazis.take_damage(100)
-print(nazis.is_alive())
+print(nazis.is_alive(), "\n")
+
+print(comeau.base_armour, comeau.base_hp)
+print(comeau.is_alive())
+comeau.take_damage(30)
+print(comeau.base_armour, comeau.base_hp)
+comeau.take_damage(100)
+print(comeau.is_alive())
