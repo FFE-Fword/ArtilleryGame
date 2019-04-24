@@ -15,7 +15,7 @@ class Npc():
     def __str__(self):
         return "{}".format(self.description)
 
-# Function that checks if the damage taken will reduce self.armour below 0
+# Function that checks if the damage(int) taken will reduce self.armour below 0
 # if it does, set self.armour=0 and take the remainder and sets it to
 # self.hp
 
