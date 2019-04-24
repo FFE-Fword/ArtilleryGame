@@ -150,20 +150,3 @@ class Guns(Friendly):
 
 
 
-nazis = Dissmounts()
-comeau = Heavies()
-
-print(nazis.base_armour, nazis.base_hp)
-nazis.has_cover()
-print(nazis.is_alive())
-nazis.take_damage(30)
-print(nazis.base_armour, nazis.base_hp)
-nazis.take_damage(100)
-print(nazis.is_alive(), "\n")
-
-print(comeau.base_armour, comeau.base_hp)
-print(comeau.is_alive())
-comeau.take_damage(30)
-print(comeau.base_armour, comeau.base_hp)
-comeau.take_damage(100)
-print(comeau.is_alive())
