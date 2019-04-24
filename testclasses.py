@@ -11,22 +11,29 @@ class Enemy():  # All enemies a derived from this class
     def __str__(self):
         return "{}".format(self.description)
 
-    # Checks if enemy health is above 0
+    # Works. Checks if enemy health is above 0
 
     def is_alive(self):
         return self.base_hp > 0
 
-    # Takes in amount(amt) as an int and adds to    self.base_armour
+    # Works. Takes in amount(amt) as an int and adds to self.base_armour
 
     def add_armour(self, amt):
         self.base_armour += amt
 
-    # Function that detucts taken damage from armour
-
-    def lose_armour(self, damage):
-        self.base_armour -= damage
-        return self.base_armour
-
+    # Function that checks if the damage taken will reduce self.armour below 0
+    # if it does, set self.armour=0 and take the remainder and sets it to 
+    # self.hp     
+    def take_damage(self, damage):
+        hp_damage = 0
+        if (damage - self.base_armour) <= 0:
+            self.base_armour -= damage
+        elif (damage - self.base_armour) > 0:
+            hp_damage = damage - self.base_armour
+            self.base_hp -= hp_damage
+            self.base_armour = 0     
+            
+        
 
 # Armour, AntiAir and Dissmounts direct child of Enemy()
 
@@ -34,7 +41,6 @@ class Armour(Enemy):
        def __init__(self):
             super().__init__() 
             self.base_hp *= 1.25
-            self.base_armour *= 1
             self.description = ("The enemy apears to be hatches down in some" "sort of armoured vehicle")
 
 
@@ -83,7 +89,17 @@ class Recce(Armour):
 
 tsevtwo = MBT()
 zsu = AntiAir()
-print(zsu.base_armour)
+
 print(tsevtwo.base_armour)
 print(tsevtwo.base_hp)
+tsevtwo.take_damage(100)
+print(tsevtwo.base_hp)
+print(tsevtwo.base_armour)
+tsevtwo.take_damage(100)
+print(tsevtwo.base_hp)
+print(tsevtwo.base_armour)
+
+
+
+print(tsevtwo)
 print(zsu)
