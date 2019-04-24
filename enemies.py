@@ -47,7 +47,6 @@ class Armour(Enemy):
     def __init__(self):
         super().__init__()
         self.base_hp *= 1.25
-        self.base_armour *= 1
         self.description = ("The enemy apears to be hatches down in some"
                             "sort of armoured vehicle")
 
