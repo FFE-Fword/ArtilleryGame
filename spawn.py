@@ -32,6 +32,17 @@ en_recce = npc.Recce()
 en_arm = npc.Armour()
 en_anti = npc.AntiAir()
 
+####This is the funtion that will shorten en generator
+
+def spawn_en():
+        for i in range(random.randint(1,128)):
+                enemy.append(en_diss)
+        for i in range(random.randint(1,16)):
+                enemy.append(en_recce)
+        for i in range(random.randint(1,16)):
+                enemy.append(en_arm)
+        return enemy
+
 # Spawns a random amount of enemies
 
 def spawn_diss():    
