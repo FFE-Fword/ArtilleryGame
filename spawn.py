@@ -25,31 +25,31 @@ i_1x =False
 
 enemy = []
 
-# Creates an instance of enemies and assigns them to a variable
+# Creates an enemy and sets to a variable
 
 en_diss = npc.Grunt()
 en_recce = npc.Recce()
-en_anti = npc.AntiAir()
 en_arm = npc.Armour()
+en_anti = npc.AntiAir()
 
 # Spawns a random amount of enemies
 
-def spawn_diss():
+def spawn_diss():    
         for i in range(random.randint(1,128)):
                 enemy.append(en_diss)
         return enemy
 
-def spawn_recce():
+def spawn_recce():      
         for i in range(random.randint(1,16)):
                 enemy.append(en_recce)
         return enemy
 
-def spawn_arm():
+def spawn_arm():      
         for i in range(random.randint(1,16)):
                 enemy.append(en_arm)
         return enemy
 
-def spawn_anti():
+def spawn_anti():      
         for i in range(random.randint(1,5)):
                 enemy.append(en_anti)
         return enemy
