@@ -61,6 +61,7 @@ def spawn_anti():
 # Working like expected. Take another look.
 
 def find_diss_size(list):
+        spawn_diss()
         if list.count(en_diss) == 128:
                 i_coy = True
                 print("It's a coy")
@@ -91,7 +92,8 @@ def find_diss_size(list):
 
 # Working like expected. Take another look.
 
-def find_recce_size(list):        
+def find_recce_size(list):
+        spawn_recce()  
         if list.count(en_recce) >=13 and list.count(en_recce) <=16:
                 a_pltplus = True
                 print("It's a coy plus of armoured")
@@ -118,7 +120,8 @@ def find_recce_size(list):
 
 # Working like expected. Take another look.
 
-def find_arm_size(list):        
+def find_arm_size(list):
+        spawn_arm()        
         if list.count(en_arm) >=13 and list.count(en_arm) <=16:
                 a_pltplus = True
                 print("It's a coy plus of armour")
@@ -143,9 +146,8 @@ def find_arm_size(list):
         else:
                 print("There are no enemies. Continiue watching your arcs!")
 
-spawn_diss()
-spawn_recce()
-spawn_arm()
+
+
 find_diss_size(enemy)
 find_recce_size(enemy)
 find_arm_size(enemy)
