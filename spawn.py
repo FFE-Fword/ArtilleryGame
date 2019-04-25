@@ -147,6 +147,9 @@ def find_arm_size(list):
                 print("There are no enemies. Continiue watching your arcs!")
 
 
+# Need to make a function that will combine spawed enemeny into groups ie.     # supported by
+ 
+      
 
 find_diss_size(enemy)
 find_recce_size(enemy)
