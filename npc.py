@@ -85,6 +85,8 @@ class Dissmounts(Enemy):  # No armour unless under cover.
             self.base_armour += 25
         else:
             print("They are: " + cvr[degree])
+            self.base_armour
+        return self.base_armour
 
 
 """ These 3 are direct from Armour(). Armour is being multiplied by a set

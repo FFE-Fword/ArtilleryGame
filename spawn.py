@@ -25,9 +25,10 @@ i_1x =False
 
 enemy = []
 
-# Creates an enemy and sets to a variable
+# Creates an enemy and sets to a variable. For dissmounts, it adds a level
+# of cover that all dissmounts will share. 
 
-en_diss = npc.Grunt()
+en_diss = npc.Dissmounts().has_cover()
 en_recce = npc.Recce()
 en_arm = npc.Armour()
 en_anti = npc.AntiAir()
@@ -35,6 +36,7 @@ en_anti = npc.AntiAir()
 ####This is the funtion that will shorten en generator
 
 def spawn_en():
+        
         for i in range(random.randint(1,128)):
                 enemy.append(en_diss)
         for i in range(random.randint(1,16)):
@@ -72,7 +74,7 @@ def spawn_anti():
 # Working like expected. Take another look.
 
 def find_diss_size(list):
-        spawn_diss()
+        spawn_en()
         if list.count(en_diss) == 128:
                 i_coy = True
                 print("It's a coy")
@@ -132,7 +134,7 @@ def find_recce_size(list):
 # Working like expected. Take another look.
 
 def find_arm_size(list):
-        spawn_arm()        
+        spawn_en()        
         if list.count(en_arm) >=13 and list.count(en_arm) <=16:
                 a_pltplus = True
                 print("It's a coy plus of armour")
@@ -163,5 +165,5 @@ def find_arm_size(list):
       
 
 find_diss_size(enemy)
-find_recce_size(enemy)
-find_arm_size(enemy)
+
+
