@@ -1,7 +1,7 @@
 import random
 import npc
 
-# Lists in military breakdown style, a(Armoured) or i(Infantry)
+# Setting enemy formation size in military breakdown style, a(Armoured) or i(Infantry); sec == section, plt == platoon, coy == company
 
 a_pltplus = False
 i_pltplus = False
