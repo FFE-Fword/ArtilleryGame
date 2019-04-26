@@ -77,7 +77,7 @@ def find_en_size(list):
                 if (list.count(en_diss) <=15 and list.count(en_diss) >= 9) and (list.count(en_arm) == 3) and (list.count(en_recce) == 3):
                         i_secplus, a_plt = True, True
                         print("It's a sec+ of diss sup by plt of arm and plt of recce.")
-                elif (list.count(en_diss) <=15 and list.count(en_diss) >= 9) and (list.count(en_arm) == 2)and (list.count(en_recce) == 2):
+                elif (list.count(en_diss) <=15 and list.count(en_diss) >= 9) and (list.count(en_arm) == 2) and (list.count(en_recce) == 2):
                         i_secplus, a_pltminus = True, True
                         print("It's a sec+ of diss sup by plt- of arm and plt- of recce.")
                 elif (list.count(en_diss) <=15 and list.count(en_diss) >= 9) and (list.count(en_arm) == 1) and (list.count(en_recce) == 1):
@@ -86,7 +86,7 @@ def find_en_size(list):
                 elif list.count(en_diss) == 8 and (list.count(en_arm) == 3) and (list.count(en_recce) == 3):
                         i_sec, a_plt = True, True
                         print("It's a sec of diss sup by plt of arm and plt of recce.")
-                elif (list.count(en_diss) == 8) and (list.count(en_arm) == 2)and (list.count(en_recce) == 2):
+                elif (list.count(en_diss) == 8) and (list.count(en_arm) == 2) and (list.count(en_recce) == 2):
                         i_sec, a_pltminus = True, True
                         print("It's a sec of diss sup by plt- of arm and plt- of recce.")
                 elif (list.count(en_diss) == 8) and (list.count(en_arm) == 1) and (list.count(en_recce) == 1):
@@ -95,7 +95,7 @@ def find_en_size(list):
                 elif (list.count(en_diss) <=7 and list.count(en_diss) >=1) and (list.count(en_arm) == 3) and (list.count(en_recce) == 3):
                         i_secminus, a_plt = True, True
                         print("It's a sec- of diss sup by plt of arm and plt of recce.")
-                elif (list.count(en_diss) <=7 and list.count(en_diss) >=1) and (list.count(en_arm) == 2)and (list.count(en_recce) == 2):
+                elif (list.count(en_diss) <=7 and list.count(en_diss) >=1) and (list.count(en_arm) == 2) and (list.count(en_recce) == 2):
                         i_secminus, a_pltminus = True, True
                         print("It's a sec- of diss sup by plt- of arm and plt- of recce.")
                 elif (list.count(en_diss) <=7 and list.count(en_diss) >=1) and (list.count(en_arm) == 1) and (list.count(en_recce) == 1):
